@@ -2,9 +2,7 @@
 
 namespace App\Controllers;
 
-use App\Core\Application;
-
-class SiteController
+class SiteController extends Controller
 {
     public function home()
     {
@@ -12,12 +10,12 @@ class SiteController
             'name' => 'Max',
         ];
 
-        return Application::$app->router->renderView('home', $params);
+        return $this->render('home', $params);
     }
 
     public function contact()
     {
-        return Application::$app->router->renderView('contact');
+        return $this->render('contact');
     }
 
     public function handleContact()
