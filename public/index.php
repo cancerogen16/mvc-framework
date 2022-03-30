@@ -1,3 +1,4 @@
 <?php
 
-phpinfo();
+require_once '../vendor/autoload.php';
+
