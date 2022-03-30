@@ -63,7 +63,6 @@ abstract class Model
         return empty($this->errors);
     }
 
-
     public function addError(string $attribute, string $rule, $params = [])
     {
         $message = $this->errorMessages()[$rule] ?? '';
@@ -73,6 +72,15 @@ abstract class Model
         }
 
         $this->errors[$attribute][] = $message;
+    }
+
+    /**
+     * @param string $attribute
+     * @return false|mixed
+     */
+    public function hasError(string $attribute)
+    {
+        return $this->errors[$attribute] ?? false;
     }
 
     /**
