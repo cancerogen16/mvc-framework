@@ -8,7 +8,11 @@ class SiteController
 {
     public function home()
     {
-        return Application::$app->router->renderView('home');
+        $params = [
+            'name' => 'Max',
+        ];
+
+        return Application::$app->router->renderView('home', $params);
     }
 
     public function contact()
