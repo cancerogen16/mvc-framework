@@ -1,4 +1,4 @@
-<h1>Contact page</h1>
+<h1>Registration page</h1>
 
 <form action="" method="post">
     <div class="mb-3">
@@ -12,6 +12,10 @@
     <div class="mb-3">
         <label for="password" class="form-label">Password</label>
         <input type="password" class="form-control" id="password" name="password">
+    </div>
+    <div class="mb-3">
+        <label for="confirm" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" id="confirm" name="confirm">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
