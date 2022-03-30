@@ -1,5 +1,14 @@
 <h1>Registration page</h1>
 
+<?php if (!empty($errors)) : ?>
+<?php foreach ($errors as $error) : ?>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <?= $error ?>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<?php endforeach; ?>
+<?php endif; ?>
+
 <form action="" method="post">
     <div class="mb-3">
         <label for="name" class="form-label">Name</label>
