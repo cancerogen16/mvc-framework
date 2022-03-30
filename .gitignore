@@ -1,0 +1,7 @@
+.vscode/launch.json
+vendor/
+.idea/
+.vscode/
+public/img/
+.phpunit.result.cache
+build/
