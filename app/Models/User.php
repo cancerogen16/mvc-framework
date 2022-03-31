@@ -13,12 +13,21 @@ class User extends DbModel
 
     public function tableName(): string
     {
-        return 'user';
+        return 'users';
     }
 
-    public function register()
+    public function attributes(): array
     {
-        echo 'Creating new user';
+        return [
+            'name',
+            'email',
+            'password',
+        ];
+    }
+
+    public function register(): bool
+    {
+        return $this->save();
     }
 
     public function rules(): array
