@@ -25,11 +25,6 @@ class User extends DbModel
         ];
     }
 
-    public function register(): bool
-    {
-        return $this->save();
-    }
-
     public function rules(): array
     {
         return [
