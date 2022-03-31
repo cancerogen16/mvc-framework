@@ -8,7 +8,7 @@ require_once '../vendor/autoload.php';
 
 define('DIR_ROOT', dirname(__DIR__));
 
-$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv = Dotenv\Dotenv::createImmutable(DIR_ROOT);
 $dotenv->load();
 
 $config = [
