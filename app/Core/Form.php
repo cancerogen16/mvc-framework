@@ -2,8 +2,6 @@
 
 namespace App\Core;
 
-use App\Models\Model;
-
 class Form
 {
     /**

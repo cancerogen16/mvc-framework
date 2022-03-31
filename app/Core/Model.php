@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App\Core;
 
 abstract class Model
 {
@@ -95,7 +95,7 @@ abstract class Model
     /**
      * @return string[]
      */
-    public function errorMessages()
+    public function errorMessages(): array
     {
         return [
             self::RULE_REQUIRED => 'This field is required',

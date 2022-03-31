@@ -2,8 +2,6 @@
 
 namespace App\Core;
 
-use App\Models\Model;
-
 class Field
 {
     public const TYPE_TEXT = 'text';
