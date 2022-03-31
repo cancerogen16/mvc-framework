@@ -5,3 +5,4 @@ vendor/
 public/img/
 .phpunit.result.cache
 build/
+/.env

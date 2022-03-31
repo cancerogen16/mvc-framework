@@ -8,7 +8,18 @@ require_once '../vendor/autoload.php';
 
 define('DIR_ROOT', dirname(__DIR__));
 
-$app = new Application(DIR_ROOT);
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load();
+
+$config = [
+    'db' => [
+        'dsn' => $_ENV['DB_DSN'],
+        'user' => $_ENV['DB_USER'],
+        'password' => $_ENV['DB_PASSWORD'],
+    ],
+];
+
+$app = new Application(DIR_ROOT, $config);
 
 $app->router->get('/', [SiteController::class, 'home']);
 

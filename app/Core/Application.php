@@ -21,6 +21,10 @@ class Application
      */
     public Response $response;
     /**
+     * @var Database
+     */
+    public Database $db;
+    /**
      * @var Application
      */
     public static Application $app;
@@ -32,7 +36,7 @@ class Application
     /**
      *
      */
-    public function __construct($rootPath)
+    public function __construct($rootPath, array $config)
     {
         self::$ROOT_DIR = $rootPath;
         self::$app = $this;
@@ -41,6 +45,8 @@ class Application
         $this->response = new Response();
 
         $this->router = new Router($this->request, $this->response);
+
+        $this->db = new Database($config['db']);
     }
 
     /**
