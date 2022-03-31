@@ -84,6 +84,15 @@ abstract class Model
     }
 
     /**
+     * @param string $attribute
+     * @return false|mixed
+     */
+    public function getFirstError(string $attribute)
+    {
+        return $this->errors[$attribute][0] ?? false;
+    }
+
+    /**
      * @return string[]
      */
     public function errorMessages()
