@@ -8,7 +8,7 @@ abstract class DbModel extends Model
 
     abstract public function attributes(): array;
 
-    public function save()
+    public function save(): bool
     {
         $tableName = $this->tableName();
         $attributes = $this->attributes();
