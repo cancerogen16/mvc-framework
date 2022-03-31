@@ -4,10 +4,10 @@ namespace App\Models;
 
 class RegisterModel extends Model
 {
-    public string $name;
-    public string $email;
-    public string $password;
-    public string $confirm;
+    public string $name = '';
+    public string $email = '';
+    public string $password = '';
+    public string $confirm = '';
 
     public function register()
     {
