@@ -18,17 +18,17 @@ class AuthController extends Controller
     {
         $errors = [];
 
-        $registerModel = new User;
+        $user = new User;
 
         if ($request->isPost()) {
-            $registerModel->loadData($request->getBody());
+            $user->loadData($request->getBody());
 
-            if ($registerModel->validate() && $registerModel->save()) {
+            if ($user->validate() && $user->save()) {
                 return 'Success';
             }
 
             return $this->render('register', [
-                'model' => $registerModel,
+                'model' => $user,
                 'errors' => $errors,
             ]);
         }
@@ -36,7 +36,7 @@ class AuthController extends Controller
         $this->setLayout('auth');
 
         return $this->render('register', [
-            'model' => $registerModel,
+            'model' => $user,
             'errors' => $errors,
         ]);
     }
