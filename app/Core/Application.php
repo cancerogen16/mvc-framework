@@ -43,9 +43,9 @@ class Application
      */
     public static Application $app;
     /**
-     * @var Controller
+     * @var ?Controller
      */
-    public Controller $controller;
+    public ?Controller $controller = null;
 
     /**
      *
