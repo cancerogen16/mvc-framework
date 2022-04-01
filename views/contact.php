@@ -1,17 +1,19 @@
+<?php
+
+use App\Core\Form;
+use App\Core\View;
+use App\Models\ContactForm;
+
+/** @var $model ContactForm */
+/** @var $this View */
+
+$this->title = 'Contact';
+?>
 <h1>Contact page</h1>
 
-<form action="" method="post">
-    <div class="mb-3">
-        <label for="name" class="form-label">Name</label>
-        <input type="text" class="form-control" id="name" name="name">
-    </div>
-    <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="text" class="form-control" id="email" name="email">
-    </div>
-    <div class="mb-3">
-        <label for="password" class="form-label">Password</label>
-        <input type="password" class="form-control" id="password" name="password">
-    </div>
+<?php $form = Form::begin('', 'post'); ?>
+    <?php echo $form->field($model, 'subject'); ?>
+    <?php echo $form->field($model, 'email')->emailField(); ?>
+    <?php echo $form->field($model, 'body')->passwordField(); ?>
     <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<?php echo Form::end(); ?>

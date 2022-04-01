@@ -30,7 +30,7 @@ class Controller
      */
     public function render($view, array $params = [])
     {
-        return Application::$app->router->renderView($view, $params);
+        return Application::$app->view->renderView($view, $params);
     }
 
     public function registerMiddleWare(BaseMiddleWare $middleware)
