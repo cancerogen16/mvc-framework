@@ -25,6 +25,14 @@ abstract class Model
     abstract public function rules(): array;
 
     /**
+     * @return array
+     */
+    public function labels(): array
+    {
+        return [];
+    }
+
+    /**
      * @return bool
      */
     public function validate(): bool
@@ -79,6 +87,12 @@ abstract class Model
         return empty($this->errors);
     }
 
+    /**
+     * @param string $attribute
+     * @param string $rule
+     * @param $params
+     * @return void
+     */
     public function addError(string $attribute, string $rule, $params = [])
     {
         $message = $this->errorMessages()[$rule] ?? '';
