@@ -2,11 +2,15 @@
 
 namespace App\Core;
 
+use PDOStatement;
+
 abstract class DbModel extends Model
 {
     abstract public function tableName(): string;
 
     abstract public function attributes(): array;
+
+    abstract public function primaryKey(): string;
 
     public function save(): bool
     {
@@ -28,8 +32,35 @@ abstract class DbModel extends Model
         return true;
     }
 
+    /**
+     * @param $sql
+     * @return false|PDOStatement
+     */
     public static function prepare($sql)
     {
         return Application::$app->db->pdo->prepare($sql);
+    }
+
+    /**
+     * @param $where
+     * @return false|mixed|object
+     */
+    public function findOne($where)
+    {
+        $tableName = static::tableName();
+
+        $attributes = array_keys($where);
+
+        $sql = implode("AND ", array_map(fn($attr) => "$attr=:$attr", $attributes));
+
+        $statement = self::prepare("SELECT * FROM $tableName WHERE $sql");
+
+        foreach ($where as $key => $value) {
+            $statement->bindValue(":$key", $value);
+        }
+
+        $statement->execute();
+
+        return $statement->fetchObject(static::class);
     }
 }

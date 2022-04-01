@@ -113,6 +113,16 @@ abstract class Model
 
     /**
      * @param string $attribute
+     * @param string $message
+     * @return void
+     */
+    public function addError(string $attribute, string $message)
+    {
+        $this->errors[$attribute][] = $message;
+    }
+
+    /**
+     * @param string $attribute
      * @return false|mixed
      */
     public function hasError(string $attribute)

@@ -1,5 +1,6 @@
 <?php
 use App\Core\Application;
+
 ?><!doctype html>
 <html lang="en">
 <head>

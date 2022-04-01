@@ -29,6 +29,14 @@ class Application
      */
     public Database $db;
     /**
+     * @var ?DbModel
+     */
+    public ?DbModel $user;
+    /**
+     * @var string
+     */
+    public string $userClass;
+    /**
      * @var Application
      */
     public static Application $app;
@@ -53,6 +61,17 @@ class Application
         $this->router = new Router($this->request, $this->response);
 
         $this->db = new Database($config['db']);
+
+        $this->userClass = $config['userClass'];
+
+        $primaryValue = $this->session->get('user');
+
+        if ($primaryValue) {
+            $primaryKey = $this->userClass::primaryKey();
+            $this->user = $this->userClass::findOne([$primaryKey => $primaryValue]);
+        } else {
+            $this->user = null;
+        }
     }
 
     /**
@@ -77,5 +96,31 @@ class Application
     public function setController(Controller $controller): void
     {
         $this->controller = $controller;
+    }
+
+    /**
+     * @param DbModel $user
+     * @return bool
+     */
+    public function login(DbModel $user): bool
+    {
+        $this->user = $user;
+
+        $primaryKey = $user->primaryKey();
+        $primaryValue = $user->{$primaryKey};
+
+        $this->session->set('user', $primaryValue);
+
+        return true;
+    }
+
+    /**
+     * @return void
+     */
+    public function logout()
+    {
+        $this->user = null;
+
+        $this->session->remove('user');
     }
 }

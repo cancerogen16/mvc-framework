@@ -75,4 +75,12 @@ class User extends DbModel
             ],
         ];
     }
+
+    /**
+     * @return string
+     */
+    public function primaryKey(): string
+    {
+        return 'id';
+    }
 }
