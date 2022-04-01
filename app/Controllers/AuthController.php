@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Core\Application;
+use App\Core\Middlewares\AuthMiddleWare;
 use App\Core\Request;
 use App\Core\Response;
 use App\Models\LoginForm;
@@ -10,6 +11,11 @@ use App\Models\User;
 
 class AuthController extends Controller
 {
+    public function __construct()
+    {
+        $this->registerMiddleWare(new AuthMiddleWare(['profile']));
+    }
+
     public function login(Request $request, Response $response)
     {
         $loginForm = new LoginForm();
