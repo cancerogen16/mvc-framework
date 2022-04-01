@@ -32,6 +32,11 @@ abstract class Model
         return [];
     }
 
+    public function getLabel(string $attribute)
+    {
+        return $this->labels()[$attribute] ?? $attribute;
+    }
+
     /**
      * @return bool
      */
@@ -78,7 +83,7 @@ abstract class Model
                     $record = $statement->fetchObject();
 
                     if ($record) {
-                        $this->addError($attribute, self::RULE_UNIQUE, ['field' => $attribute]);
+                        $this->addError($attribute, self::RULE_UNIQUE, ['field' => $this->getLabel($attribute)]);
                     }
                 }
             }
