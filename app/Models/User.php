@@ -43,10 +43,26 @@ class User extends DbModel
     public function rules(): array
     {
         return [
-            'name' => [self::RULE_REQUIRED],
-            'email' => [self::RULE_REQUIRED, self::RULE_EMAIL],
-            'password' => [self::RULE_REQUIRED, [self::RULE_MIN, 'min' => 4], [self::RULE_MAX, 'max' => 10]],
-            'confirm' => [self::RULE_REQUIRED, [self::RULE_MATCH, 'match' => 'password']],
+            'name' => [
+                self::RULE_REQUIRED
+            ],
+            'email' => [
+                self::RULE_REQUIRED,
+                self::RULE_EMAIL,
+                [
+                    self::RULE_UNIQUE,
+                    'class' => self::class
+                ]
+            ],
+            'password' => [
+                self::RULE_REQUIRED,
+                [self::RULE_MIN, 'min' => 4],
+                [self::RULE_MAX, 'max' => 10]
+            ],
+            'confirm' => [
+                self::RULE_REQUIRED,
+                [self::RULE_MATCH, 'match' => 'password']
+            ],
         ];
     }
 }
