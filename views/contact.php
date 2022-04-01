@@ -14,6 +14,6 @@ $this->title = 'Contact';
 <?php $form = Form::begin('', 'post'); ?>
     <?php echo $form->field($model, 'subject'); ?>
     <?php echo $form->field($model, 'email')->emailField(); ?>
-    <?php echo $form->field($model, 'body')->passwordField(); ?>
+    <?php echo $form->textareaField($model, 'body'); ?>
     <button type="submit" class="btn btn-primary">Submit</button>
 <?php echo Form::end(); ?>

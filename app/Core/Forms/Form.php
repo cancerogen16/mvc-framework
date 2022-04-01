@@ -26,8 +26,23 @@ class Form
         return '</form>';
     }
 
-    public static function field(Model $model, string $attribute)
+    /**
+     * @param Model $model
+     * @param string $attribute
+     * @return InputField
+     */
+    public static function field(Model $model, string $attribute): InputField
     {
-        return new Field($model, $attribute);
+        return new InputField($model, $attribute);
+    }
+
+    /**
+     * @param Model $model
+     * @param string $attribute
+     * @return TextareaField
+     */
+    public static function textareaField(Model $model, string $attribute): TextareaField
+    {
+        return new TextareaField($model, $attribute);
     }
 }
