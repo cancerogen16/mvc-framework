@@ -123,4 +123,12 @@ class Application
 
         $this->session->remove('user');
     }
+
+    /**
+     * @return bool
+     */
+    public static function isGuest(): bool
+    {
+        return !self::$app->user;
+    }
 }
