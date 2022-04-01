@@ -17,20 +17,19 @@ class AuthController extends Controller
 
     public function register(Request $request)
     {
-        $errors = [];
-
         $user = new User;
 
         if ($request->isPost()) {
             $user->loadData($request->getBody());
 
             if ($user->validate() && $user->save()) {
+                Application::$app->session->setFlash('success', 'Thanks for registering');
+
                 Application::$app->response->redirect('/');
             }
 
             return $this->render('register', [
                 'model' => $user,
-                'errors' => $errors,
             ]);
         }
 
@@ -38,7 +37,6 @@ class AuthController extends Controller
 
         return $this->render('register', [
             'model' => $user,
-            'errors' => $errors,
         ]);
     }
 }
