@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Core;
+namespace App\Core\Forms;
+
+use App\Core\Model;
 
 class Field
 {

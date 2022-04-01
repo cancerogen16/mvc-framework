@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\Form;
+use App\Core\Forms\Form;
 use App\Core\View;
 use App\Models\ContactForm;
 
