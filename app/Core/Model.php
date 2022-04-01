@@ -44,6 +44,7 @@ abstract class Model
     {
         foreach ($this->rules() as $attribute => $rules) {
             $value = $this->{$attribute};
+            $label = $this->getLabel($attribute);
 
             foreach ($rules as $rule) {
                 $ruleName = $rule;
@@ -69,6 +70,7 @@ abstract class Model
                 }
 
                 if ($ruleName === self::RULE_MATCH && $value !== $this->{$rule['match']}) {
+                    $rule['match'] = $this->getLabel($rule['match']);
                     $this->addError($attribute, self::RULE_MATCH, $rule);
                 }
 
@@ -83,7 +85,7 @@ abstract class Model
                     $record = $statement->fetchObject();
 
                     if ($record) {
-                        $this->addError($attribute, self::RULE_UNIQUE, ['field' => $this->getLabel($attribute)]);
+                        $this->addError($attribute, self::RULE_UNIQUE, ['field' => $label]);
                     }
                 }
             }
