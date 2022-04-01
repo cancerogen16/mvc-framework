@@ -3,6 +3,7 @@
 namespace App\Core;
 
 use App\Controllers\Controller;
+use App\Core\Exceptions\NotFoundException;
 
 /**
  * @package App\Core
@@ -54,6 +55,7 @@ class Router
 
     /**
      * @return array|false|mixed|string|string[]
+     * @throws NotFoundException
      */
     public function resolve()
     {
@@ -65,7 +67,7 @@ class Router
 
         if ($callback === false) {
             $this->response->setStatusCode(404);
-            return $this->renderView('_404');
+            throw new NotFoundException();
         }
 
         if (is_string($callback)) {
