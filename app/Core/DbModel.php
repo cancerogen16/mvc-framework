@@ -12,6 +12,9 @@ abstract class DbModel extends Model
 
     abstract public function primaryKey(): string;
 
+    /**
+     * @return bool
+     */
     public function save(): bool
     {
         $tableName = $this->tableName();
