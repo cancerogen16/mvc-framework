@@ -36,6 +36,8 @@ class Application
      * @var string
      */
     public string $userClass;
+
+    public string $layout = 'main';
     /**
      * @var Application
      */
