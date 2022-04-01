@@ -31,9 +31,9 @@ class Application
      */
     public Database $db;
     /**
-     * @var ?DbModel
+     * @var ?UserModel
      */
-    public ?DbModel $user;
+    public ?UserModel $user;
     /**
      * @var string
      */
@@ -117,10 +117,10 @@ class Application
     }
 
     /**
-     * @param DbModel $user
+     * @param UserModel $user
      * @return bool
      */
-    public function login(DbModel $user): bool
+    public function login(UserModel $user): bool
     {
         $this->user = $user;
 
