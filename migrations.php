@@ -1,6 +1,6 @@
 <?php
 
-use App\core\Application;
+use erast\phpmvc\Application;
 
 require_once './vendor/autoload.php';
 
@@ -10,6 +10,7 @@ $dotenv = Dotenv\Dotenv::createImmutable(DIR_ROOT);
 $dotenv->load();
 
 $config = [
+    'userClass' => '',
     'db' => [
         'dsn' => $_ENV['DB_DSN'],
         'user' => $_ENV['DB_USER'],
