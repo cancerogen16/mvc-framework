@@ -2,10 +2,10 @@
 
 namespace App\controllers;
 
-use App\core\Application;
-use App\core\Middlewares\AuthMiddleWare;
-use App\core\Request;
-use App\core\Response;
+use erast\phpmvc\Application;
+use erast\phpmvc\Middlewares\AuthMiddleWare;
+use erast\phpmvc\Request;
+use erast\phpmvc\Response;
 use App\models\LoginForm;
 use App\models\User;
 

@@ -1,5 +1,5 @@
 <?php
-use App\core\Application;
+use erast\phpmvc\Application;
 
 ?><!doctype html>
 <html lang="en">

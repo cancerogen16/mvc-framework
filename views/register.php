@@ -1,6 +1,6 @@
 <?php
 
-use App\core\Forms\Form;
+use erast\phpmvc\Forms\Form;
 use App\models\User;
 
 /** @var $model User */

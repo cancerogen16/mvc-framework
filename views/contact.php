@@ -1,7 +1,7 @@
 <?php
 
-use App\core\Forms\Form;
-use App\core\View;
+use erast\phpmvc\Forms\Form;
+use erast\phpmvc\View;
 use App\models\ContactForm;
 
 /** @var $model ContactForm */

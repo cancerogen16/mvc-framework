@@ -4,7 +4,7 @@ class m0001_initial
 {
     public function up()
     {
-        $db = App\core\Application::$app->db;
+        $db = erast\phpmvc\Application::$app->db;
 
         $SQL = "CREATE TABLE IF NOT EXISTS users (
             id INT AUTO_INCREMENT PRIMARY KEY,
@@ -19,7 +19,7 @@ class m0001_initial
 
     public function down()
     {
-        $db = App\core\Application::$app->db;
+        $db = erast\phpmvc\Application::$app->db;
 
         $SQL = "DROP TABLE users;";
 

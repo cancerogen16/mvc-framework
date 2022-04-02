@@ -2,8 +2,8 @@
 
 namespace App\controllers;
 
-use App\core\Application;
-use App\core\Middlewares\BaseMiddleWare;
+use erast\phpmvc\Application;
+use erast\phpmvc\Middlewares\BaseMiddleWare;
 
 class Controller
 {

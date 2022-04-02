@@ -2,8 +2,8 @@
 
 namespace App\models;
 
-use App\core\Application;
-use App\core\Model;
+use erast\phpmvc\Application;
+use erast\phpmvc\Model;
 
 class LoginForm extends Model
 {

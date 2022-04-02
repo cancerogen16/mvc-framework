@@ -2,7 +2,7 @@
 
 use App\controllers\AuthController;
 use App\controllers\SiteController;
-use App\core\Application;
+use erast\phpmvc\Application;
 use App\models\User;
 
 require_once '../vendor/autoload.php';
