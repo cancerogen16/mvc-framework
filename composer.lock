@@ -4,8 +4,41 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "219141a6696ce7304fb6cf039506ffef",
+    "content-hash": "4f8bc0598761151010cb2a12550b1c9a",
     "packages": [
+        {
+            "name": "erast/phpmvc",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cancerogen16/mvc-framework-core.git",
+                "reference": "b6329ef246bb7fe46f23c069ede3b5fb6501c29c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cancerogen16/mvc-framework-core/zipball/b6329ef246bb7fe46f23c069ede3b5fb6501c29c",
+                "reference": "b6329ef246bb7fe46f23c069ede3b5fb6501c29c",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "erast\\phpmvc\\": "."
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "erast",
+                    "email": "don544@mail.ru"
+                }
+            ],
+            "support": {
+                "issues": "https://github.com/cancerogen16/mvc-framework-core/issues",
+                "source": "https://github.com/cancerogen16/mvc-framework-core/tree/v1.0.0"
+            },
+            "time": "2022-04-02T09:44:42+00:00"
+        },
         {
             "name": "graham-campbell/result-type",
             "version": "v1.0.4",
