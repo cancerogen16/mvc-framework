@@ -1,7 +1,7 @@
 <?php
 
-use App\Core\Forms\Form;
-use App\Models\LoginForm;
+use App\core\Forms\Form;
+use App\models\LoginForm;
 
 /** @var $model LoginForm */
 ?>

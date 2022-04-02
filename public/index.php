@@ -1,9 +1,9 @@
 <?php
 
-use App\Controllers\AuthController;
-use App\Controllers\SiteController;
-use App\Core\Application;
-use App\Models\User;
+use App\controllers\AuthController;
+use App\controllers\SiteController;
+use App\core\Application;
+use App\models\User;
 
 require_once '../vendor/autoload.php';
 

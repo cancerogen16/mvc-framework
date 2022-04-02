@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Controllers;
+namespace App\controllers;
 
-use App\Core\Application;
-use App\Core\Request;
-use App\Core\Response;
-use App\Models\ContactForm;
+use App\core\Application;
+use App\core\Request;
+use App\core\Response;
+use App\models\ContactForm;
 
 class SiteController extends Controller
 {

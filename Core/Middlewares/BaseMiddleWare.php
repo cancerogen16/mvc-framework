@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Middlewares;
+namespace App\core\Middlewares;
 
 abstract class BaseMiddleWare
 {

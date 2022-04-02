@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Core;
+namespace App\core;
 
-use App\Controllers\Controller;
-use App\Core\Exceptions\NotFoundException;
+use App\controllers\Controller;
+use App\core\Exceptions\NotFoundException;
 
 /**
- * @package App\Core
+ * @package App\core
  */
 class Router
 {

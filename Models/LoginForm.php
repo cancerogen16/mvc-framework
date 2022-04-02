@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Models;
+namespace App\models;
 
-use App\Core\Application;
-use App\Core\Model;
+use App\core\Application;
+use App\core\Model;
 
 class LoginForm extends Model
 {

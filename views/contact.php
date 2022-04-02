@@ -1,8 +1,8 @@
 <?php
 
-use App\Core\Forms\Form;
-use App\Core\View;
-use App\Models\ContactForm;
+use App\core\Forms\Form;
+use App\core\View;
+use App\models\ContactForm;
 
 /** @var $model ContactForm */
 /** @var $this View */

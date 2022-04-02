@@ -4,7 +4,7 @@ class m0002_add_password_column
 {
     public function up()
     {
-        $db = \App\Core\Application::$app->db;
+        $db = App\core\Application::$app->db;
 
         $SQL = "ALTER TABLE users ADD COLUMN password VARCHAR(255) NOT NULL;";
 
@@ -13,7 +13,7 @@ class m0002_add_password_column
 
     public function down()
     {
-        $db = \App\Core\Application::$app->db;
+        $db = App\core\Application::$app->db;
 
         $SQL = "ALTER TABLE users DROP COLUMN password;";
 

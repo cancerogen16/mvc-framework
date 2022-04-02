@@ -1,10 +1,9 @@
 <?php
 
-namespace App\Core;
+namespace App\core;
 
-use App\Controllers\Controller;
-use App\Core\Db\Database;
-use App\Core\Db\DbModel;
+use App\controllers\Controller;
+use App\core\Db\Database;
 
 class Application
 {
