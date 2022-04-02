@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "erast/phpmvc",
-            "version": "v1.0.0",
+            "version": "v1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cancerogen16/mvc-framework-core.git",
-                "reference": "b6329ef246bb7fe46f23c069ede3b5fb6501c29c"
+                "reference": "bbfff1c5783915e3dc836ecfaec67d981355c78d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cancerogen16/mvc-framework-core/zipball/b6329ef246bb7fe46f23c069ede3b5fb6501c29c",
-                "reference": "b6329ef246bb7fe46f23c069ede3b5fb6501c29c",
+                "url": "https://api.github.com/repos/cancerogen16/mvc-framework-core/zipball/bbfff1c5783915e3dc836ecfaec67d981355c78d",
+                "reference": "bbfff1c5783915e3dc836ecfaec67d981355c78d",
                 "shasum": ""
             },
             "type": "library",
@@ -35,9 +35,9 @@
             ],
             "support": {
                 "issues": "https://github.com/cancerogen16/mvc-framework-core/issues",
-                "source": "https://github.com/cancerogen16/mvc-framework-core/tree/v1.0.0"
+                "source": "https://github.com/cancerogen16/mvc-framework-core/tree/v1.0.1"
             },
-            "time": "2022-04-02T09:44:42+00:00"
+            "time": "2022-04-02T16:27:51+00:00"
         },
         {
             "name": "graham-campbell/result-type",
